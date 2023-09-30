@@ -19,6 +19,9 @@ function App() {
   if(completedTasks===null){
     completedTasks=[];
   }
+
+  // state variables
+
   const [tasks,setTasks] = useState(pendingTasks);
   const [completed,setCompleted] = useState(completedTasks);
   const [formData,setFormData] = useState({

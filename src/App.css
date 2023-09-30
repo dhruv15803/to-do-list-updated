@@ -183,6 +183,15 @@
 /* Media queries */
 
 
+@media (max-width:1000px){
+  .home-form{
+    position: relative;
+    top:200px;
+  }
+}
+
+
+
 @media (max-width:500px){
 
   #navbar{
@@ -206,6 +215,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .home-form{
+    position: relative;
+    top:200px;
   }
 
   .pending-task-btns button{
