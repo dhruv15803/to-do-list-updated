@@ -1,38 +1,215 @@
-.App {
+*{
+  margin:0px;
+  padding:0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar css */
+
+#navbar{
+  position: relative;
+  display: flex;
+  padding:10px;
+  /* border:2px solid black; */
+  border-bottom: 1px solid black;
+  align-items: center;
+}
+
+#navLeft a{
+  text-decoration: none;
+  color:black;
+  font-size: 1.6rem;
+}
+
+#navRight{
+  position: absolute;
+  right:50px;
+}
+
+.btn{
+  width:150px;
+  height:30px;
+  background-color: #008cff;
+  color: white;
+  transition: 0.3s;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 0px 10px;
+  border: none;
+}
+
+.btn:hover{
+  background-color: #0a6bbb;
+}
+
+
+/* Home page css */
+
+
+.child-heading-container{
+  width:60%;
+  margin: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.child-heading-container h1{
+  font-size: 2.5rem;
+  margin:10px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.child-heading-container p{
+  font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heading-btns-container{
+  display: flex;
+  justify-content: center;
+}
+
+.home-form{
+  display: flex;
+  justify-content: center;
+  margin: 15px 0px;
+  align-items: center;
+}
+
+.inputBox{
+  width:30%;
+  height:20px;
+  padding:8px;
+}
+
+
+/* Pending page css */
+
+.no-tasks{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.no-tasks p{
+  font-size: 1.8rem;
+  margin: 10px 0px;
+}
+
+.error-btn{
+  width:200px;
+  height:30px;
+  background-color: #008cff;
   color: white;
+  transition: 0.3s;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin:0px 10px;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.error-btn:hover{
+  background-color: #0a6bbb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.pending-child-container{
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  margin:15px auto;
+}
+
+.pending-child-container h1{
+  margin:10px 0px;
+}
+
+.pending-task-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  margin:5px 0px;
+  padding:10px;
+  font-size: 1.4rem;
+}
+
+.pending-task-title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pending-task-btns{
+  display: flex;
+  flex-direction: row;
+  padding:8px;
+}
+
+
+
+/* Completed page css */
+
+.completed-child-container{
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  margin:15px auto;
+}
+
+.completed-child-container h1{
+  margin:10px 0px;
+}
+
+.completed-task-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  margin:5px 0px;
+  padding:10px;
+  font-size: 1.4rem;
+}
+
+.completed-task-title{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Media queries */
+
+
+@media (max-width:500px){
+
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  #navRight{
+    margin:10px 0px;
+    position: relative;
+    right:0px;
   }
+
+  #navLeft a h1{
+    font-size:1.8rem;
+  }
+
+  .pending-task-btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pending-task-btns button{
+    margin:10px 0px;
+  }
+
 }
