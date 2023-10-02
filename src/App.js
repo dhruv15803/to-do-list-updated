@@ -27,6 +27,7 @@ function App() {
   const [formData,setFormData] = useState({
     'task':'',
     'description':'',
+    'show':false
   });
 
   const handleChange = (event)=>{
@@ -67,6 +68,21 @@ function App() {
     toast.success('Completed task!');
   }
 
+  const changeShow = (index)=>{
+    const newTasks = tasks.map((item,i)=>{
+      if(i===index){
+        return {
+          ...item,
+          'show':!item.show
+        }
+      }
+      else{
+        return item;
+      }
+    })
+    setTasks(newTasks);
+  }
+
   const clearCompleted = ()=>{
     setCompleted([]);
   }
@@ -99,6 +115,7 @@ function App() {
          deleteTask={deleteTask}
          completed={completed}
          completeTask={completeTask}
+         changeShow={changeShow}
         />}/>
         <Route path='/completed' element={<Completed 
         completed={completed}

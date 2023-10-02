@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ToastContainer } from 'react-toastify'
 import { Link } from 'react-router-dom'
 
 const Pending = (props) => {
-
-    const [show,setShow] = useState(false);
 
 
   return (
@@ -22,10 +20,10 @@ const Pending = (props) => {
                         <div className="pending-task-heading">
                             {item.task}
                         </div>
-                        <div className="show-description">
-                            <button className="btn" onClick={()=>setShow(prevShow=>!prevShow)}>{show ? 'Hide details' : 'Show details'}</button>
-                        </div>
-                        {show && <div className="pending-task-description">
+                        {item.description.trim()!== '' && <div className="show-description">
+                            <button className="btn" onClick={()=>props.changeShow(index)}>Show details</button>
+                        </div>}
+                        {item.show && <div className="pending-task-description">
                             {item.description}
                         </div>}
                     </div>
