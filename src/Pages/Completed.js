@@ -14,7 +14,7 @@ const Completed = (props) => {
             {props.completed.length!==0 && props.completed.map((item,index)=>{
                 return <div className="completed-task-container">
                     <div className="completed-task-title">
-                        {item}
+                        {item.task}
                     </div>
                 </div>
             })}
