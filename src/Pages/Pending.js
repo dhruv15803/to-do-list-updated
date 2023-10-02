@@ -21,7 +21,7 @@ const Pending = (props) => {
                             {item.task}
                         </div>
                         {item.description.trim()!== '' && <div className="show-description">
-                            <button className="btn" onClick={()=>props.changeShow(index)}>Show details</button>
+                            <button className="btn" onClick={()=>props.changeShow(index)}>{item.show ? 'Hide details' : 'Show details'}</button>
                         </div>}
                         {item.show && <div className="pending-task-description">
                             {item.description}
