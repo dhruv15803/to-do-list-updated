@@ -73,9 +73,11 @@
 
 .home-form{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 15px 0px;
   align-items: center;
+  gap:35px;
 }
 
 .inputBox{
@@ -139,9 +141,28 @@
 
 .pending-task-title{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap:10px;
+}
+
+
+
+
+.pending-task-heading{
+  font-size: 2rem;
+  display: flex;
   flex-wrap: wrap;
 }
+
+.pending-task-description{
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
 
 .pending-task-btns{
   display: flex;
@@ -221,9 +242,13 @@
     position: relative;
     top:200px;
   }
-
   .pending-task-btns button{
     margin:10px 0px;
   }
+
+  .pending-child-container{
+    width:90%;
+  }
+
 
 }

@@ -26,6 +26,7 @@ function App() {
   const [completed,setCompleted] = useState(completedTasks);
   const [formData,setFormData] = useState({
     'task':'',
+    'description':'',
   });
 
   const handleChange = (event)=>{
@@ -44,9 +45,10 @@ function App() {
       toast.error('Please enter a task');
       return;
     }
-    setTasks(prevTasks=>[...prevTasks,formData.task]);
+    setTasks(prevTasks=>[...prevTasks,formData]);
     setFormData({
       'task':'',
+      'description':'',
     })
     toast.success('Added task to list');
   }
@@ -77,6 +79,8 @@ function App() {
     localStorage.setItem('pendingTasks',JSON.stringify(tasks));
     localStorage.setItem('completedTasks',JSON.stringify(completed));
   },[tasks,completed])
+
+  console.log(tasks);
 
 
   return (

@@ -13,6 +13,7 @@ const Home = (props) => {
     </div> */}
     <form className='home-form' onSubmit={props.addTask}>
         <input value={props.formData.task} onChange={props.handleChange} type="text" name="task" id="task" placeholder='Enter task' className='inputBox' />
+        <input value={props.formData.description} onChange={props.handleChange} type="text" name="description" id="description" placeholder='Enter details' className='inputBox' />
         <button className="btn">Add task</button>
     </form>
     <ToastContainer
